@@ -1,0 +1,85 @@
+{ 
+  "dataset": {
+    "label": "\u6c96\u7e04\u770c\u56fd\u982d\u90e1\u56fd\u982d\u6751\u6c7a\u7b97", 
+    "name": "jp-473014", 
+    "html_url": "https://openspending.org/jp-473014", 
+    "category": "budget", 
+    "currency": "JPY", 
+    "default_time": null,
+    "territories": [
+      "JP"
+    ], 
+    "languages": [
+      "ja"
+    ], 
+    "description": "\u7dcf\u52d9\u7701\uff5c\u5730\u65b9\u8ca1\u653f\u72b6\u6cc1\u8abf\u67fb\u95a2\u4fc2\u8cc7\u6599\uff5c\u5e02\u753a\u6751\u5225\u6c7a\u7b97\u72b6\u6cc1\u8abf<br>\r\n<a href=\"http://www.soumu.go.jp/iken/kessan_jokyo_2.html\">http://www.soumu.go.jp/iken/kessan_jokyo_2.html</a><br>\r\n<br>\r\n<a href=\"https://github.com/ats777/wdmmg\">https://github.com/ats777/wdmmg</a>", 
+    "serp_title": null,
+    "serp_teaser": null,
+    "schema_version": null, 
+    "badges": [], 
+    "timestamps": {
+      "created": "2014-06-28T00:00:00.000000", 
+      "last_modified": "2014-06-28T00:00:00.000000"
+    }
+  },
+  "mapping": {
+    "amount": {
+      "dimension": "amount", 
+      "type": "measure", 
+      "label": "Amount", 
+      "column": "amount", 
+      "datatype": "float", 
+      "default_value": "", 
+      "description": null
+    }, 
+    "time": {
+      "dimension": "time", 
+      "type": "date", 
+      "label": "Time", 
+      "key": true, 
+      "column": "year", 
+      "default_value": "", 
+      "description": null, 
+      "datatype": "date", 
+      "format": null
+    },
+    "Category": {
+      "dimension": "Category", 
+      "type": "compound", 
+      "label": "Category", 
+      "key": true, 
+      "description": null, 
+      "attributes": {
+        "name": {
+          "column": "category_id", 
+          "datatype": "id", 
+          "default_value": ""
+        }, 
+        "label": {
+          "column": "Category", 
+          "datatype": "string", 
+          "default_value": ""
+        }
+      }
+    }, 
+    "Subcategory": {
+      "dimension": "Subcategory",
+      "type": "compound", 
+      "label": "Subcategory", 
+      "key": true, 
+      "description": null, 
+      "attributes": {
+        "name": {
+          "column": "subcategory_id", 
+          "datatype": "id", 
+          "default_value": ""
+        }, 
+        "label": {
+          "column": "Subcategory", 
+          "datatype": "string", 
+          "default_value": ""
+        }
+      }
+    }
+  }
+}
